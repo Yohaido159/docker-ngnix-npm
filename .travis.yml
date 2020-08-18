@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t yohaido159/docker-nginx-npm -f Dockerfile.dev .
+  - docker build -t yohaido159/docker-nginx-npm .
 
 script:
   - docker run -e CI=true yohaido159/docker-nginx-npm npm run test
